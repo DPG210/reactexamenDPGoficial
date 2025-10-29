@@ -57,11 +57,11 @@ export default class CrearPersonaje extends Component {
                 <h1>Crear Personaje</h1>
                 <form>
                     <label>Nombre</label><br></br>
-                    <input type='text' ref={this.cajaNombre}></input><br></br>
+                    <input type='text' ref={this.cajaNombre} className='form-control'></input><br></br>
                     <label>Imagen</label><br></br>
-                    <input type='text' ref={this.cajaImagen}></input><br></br>
+                    <input type='text' ref={this.cajaImagen} className='form-control'></input><br></br>
                     <label>Serie</label><br></br>
-                    <select ref={this.selectSerie}>
+                    <select ref={this.selectSerie} className='form-control'>
                         {
                             this.state.series.map((serie, index) => {
                                 return (<option key={index} value={serie.idSerie}>
@@ -69,7 +69,7 @@ export default class CrearPersonaje extends Component {
                                 </option>)
                             })
                         }
-                    </select>
+                    </select><br></br>
                     <button onClick={this.crearPersonaje}>Crear Personaje</button>
                 </form>
             </div>

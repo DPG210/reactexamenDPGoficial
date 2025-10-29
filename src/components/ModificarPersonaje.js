@@ -66,7 +66,7 @@ export default class ModificarPersonaje extends Component {
                     <Navigate to={"/personajes/" + this.selectSerie.current.value}></Navigate>
                 }
                 <h1>Modificar personaje</h1>
-                <select ref={this.selectNombre}>
+                <select ref={this.selectNombre} className='form-control'>
                     {
                         this.state.personajes.map((personaje, index) => {
                             return (<option key={index} value={personaje.idPersonaje}>
@@ -74,8 +74,8 @@ export default class ModificarPersonaje extends Component {
                             </option>)
                         })
                     }
-                </select>
-                <select ref={this.selectSerie}>
+                </select><br></br>
+                <select ref={this.selectSerie} className='form-control'>
                     {
                         this.state.series.map((serie, index) => {
                             return (<option key={index} value={serie.idSerie}>
